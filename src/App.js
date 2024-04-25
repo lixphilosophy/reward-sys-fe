@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AddCustomerModal from "./components/models/add-customer";
+import AddTransactionModal from "./components/models/add-transaction";
+import BatchAddTransactionModal from "./components/models/batch-add-transaction";
+import Table from "./components/table/table";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div style={{ padding: 16, display: "flex", gap: 12 }}>
+        <AddCustomerModal />
+        <AddTransactionModal />
+        <BatchAddTransactionModal />
+      </div>
+      <div style={{padding: 16, paddingTop: 0}}>
+        <Table />
+      </div>
     </div>
   );
 }
